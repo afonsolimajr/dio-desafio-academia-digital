@@ -36,6 +36,11 @@ public class AlunoServiceImpl implements IAlunoService {
   }
 
   @Override
+  public List<Aluno> getAll() {
+    return repository.findAll();
+  }
+
+  @Override
   public List<Aluno> getAll(String dataDeNascimento) {
 
     if(dataDeNascimento == null) {
@@ -54,6 +59,11 @@ public class AlunoServiceImpl implements IAlunoService {
 
   @Override
   public void delete(Long id) {
+  }
+
+  @Override
+  public List<AvaliacaoFisica> getAllAvaliacaoFisica() {
+    return null;
   }
 
   @Override
